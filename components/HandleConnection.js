@@ -9,7 +9,7 @@ import { useChainId, useNetworkMismatch } from "@thirdweb-dev/react";
 //     this.disconnectWallet = useDisconnect();
 // }
 
-export default function handleConnection() {
+export default function HandleConnection() {
     const connectWithMetamask = useMetamask();
     // const connectWithWalletConnect = useWalletConnect();
     // const disconnectWallet = useDisconnect();

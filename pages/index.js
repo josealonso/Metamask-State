@@ -1,5 +1,4 @@
 import Link from "next/link";    // import {Link} ----> error !!
-import handleConnection from "../components/handleConnection";
 
 export default function Home() {
   // const address = useAddress();
