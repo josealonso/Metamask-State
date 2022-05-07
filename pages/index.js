@@ -1,3 +1,4 @@
+import Link from "next/link";    // import {Link} ----> error !!
 import { useAddress, useDisconnect, useMetamask, useNetwork } from '@thirdweb-dev/react';
 import { useChainId, useNetworkMismatch } from "@thirdweb-dev/react";
 
@@ -26,8 +27,21 @@ export default function Home() {
   console.log("Is mismatched: " + isMismatched);
 
   if (address) {
+
     return (
       <div>
+        <div>
+          <Link href="/posts">
+            <a>Read the posts</a>
+          </Link>
+          <div>
+            <Link href="/login">
+              <a>Log in</a>
+            </Link>
+          </div>
+
+        </div>
+
         Address: {address}
         <br />
         Chain ID: {network[0].data.chain && network[0].data.chain.id}
@@ -48,15 +62,18 @@ export default function Home() {
       <button onClick={() => connectWithWalletConnect()}>
         Connect WalletConnect
       </button>
+
+      <div>
+        <Link href="/posts">
+          <a>Read the posts</a>
+        </Link>
+        <div>
+          <Link href="/login">
+            <a>Log in</a>
+          </Link>
+        </div>
+      </div>
+
     </div>
   );
 };
-  //       <>
-  //         <button onClick={disconnectWallet}>Disconnect Wallet</button>
-  //         <p>Your address: {address}</p>
-  //       </>
-  //     ) : (
-  //       <button onClick={connectWithMetamask}>Connect with Metamask</button>
-  //     )}
-  //   </div>
-  // );
