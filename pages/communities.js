@@ -1,14 +1,14 @@
 import { useAddress, useDisconnect, useMetamask, useNetworkMismatch } from '@thirdweb-dev/react';
 import Link from "next/link";
 
-export default function Login() {
+export default function Communities() {
     const address = useAddress();
     const connectWithMetamask = useMetamask();
     const disconnectWallet = useDisconnect();
     const isMismatched = useNetworkMismatch();
     return (
         <div>
-            <h2>Log In Page</h2>
+            <h2>Communities Page</h2>
             {address ? (
                 <>
                     <button onClick={disconnectWallet}>Disconnect Wallet</button>
